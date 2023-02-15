@@ -16,5 +16,12 @@ namespace Proje_Okul
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            frmOgrenciNotlar fr = new frmOgrenciNotlar();
+            fr.numara=tbxNumara.Text;
+            fr.Show();
+        }
     }
 }
