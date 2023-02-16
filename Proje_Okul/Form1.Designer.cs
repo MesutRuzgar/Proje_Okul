@@ -87,6 +87,7 @@
             this.tbxNumara.Name = "tbxNumara";
             this.tbxNumara.Size = new System.Drawing.Size(183, 26);
             this.tbxNumara.TabIndex = 4;
+            this.tbxNumara.TextChanged += new System.EventHandler(this.tbxNumara_TextChanged);
             // 
             // label3
             // 

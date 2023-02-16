@@ -23,5 +23,10 @@ namespace Proje_Okul
             fr.numara=tbxNumara.Text;
             fr.Show();
         }
+
+        private void tbxNumara_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

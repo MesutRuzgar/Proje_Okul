@@ -20,12 +20,14 @@ namespace Proje_Okul
         }
 
         SqlConnection baglanti = new SqlConnection(@"Data Source=RUZGAR\SQLEXPRESS;Initial Catalog=ProjeOkul;Integrated Security=True");
-        public string numara;
 
+        public string numara;
+        public string adSoyad;
 
         private void frmOgrenciNotlar_Load(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("Select * From Tbl_Notlar Where OgrenciId=@p1", baglanti);
+            SqlCommand komut = new SqlCommand("Select DersAd,Sınav1,Sınav2,Sınav3,Proje,Ortalama,Durum  From Tbl_Notlar inner join tbl_dersler on tbl_notlar.DersId=Tbl_Dersler.DersId Where OgrenciId=@p1", baglanti);
+
             komut.Parameters.AddWithValue("@p1", numara);
 
             SqlDataAdapter da = new SqlDataAdapter(komut);
@@ -33,6 +35,18 @@ namespace Proje_Okul
             da.Fill(dt);
             dataGridView1.DataSource = dt;
 
+
+
+            baglanti.Open();
+            SqlCommand komut2 = new SqlCommand("Select OgrenciAd,OgrenciSoyad from Tbl_Ogrenciler where OgrenciId=@p1", baglanti);
+
+            komut2.Parameters.AddWithValue("@p1", numara);
+            SqlDataReader dr = komut2.ExecuteReader();
+            while (dr.Read())
+            {
+                this.Text = dr[0] + " " + dr[1];
+            }
+            baglanti.Close();
 
         }
     }
