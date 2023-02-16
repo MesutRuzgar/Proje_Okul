@@ -28,5 +28,11 @@ namespace Proje_Okul
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            frmOgretmen fr = new frmOgretmen();
+            fr.Show();
+        }
     }
 }
