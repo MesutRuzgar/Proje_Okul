@@ -67,9 +67,10 @@ namespace Proje_Okul
             tbxDersId.Text= dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             tbxDersAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
-
+        
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
+         
             ds.DersGuncelle(tbxDersAd.Text,byte.Parse(tbxDersId.Text));
             MessageBox.Show("Ders başarıyla güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Liste();
