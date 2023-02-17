@@ -76,6 +76,12 @@
     <Compile Include="frmOgretmen.Designer.cs">
       <DependentUpon>frmOgretmen.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmOgretmenler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOgretmenler.Designer.cs">
+      <DependentUpon>frmOgretmenler.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmOgretmen.resx">
       <DependentUpon>frmOgretmen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOgretmenler.resx">
+      <DependentUpon>frmOgretmenler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

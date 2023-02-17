@@ -34,9 +34,9 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnListele = new System.Windows.Forms.Button();
-            this.tbxDersAd = new System.Windows.Forms.TextBox();
+            this.tbxOgrenciAd = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.tbxDersId = new System.Windows.Forms.TextBox();
+            this.tbxOgrenciId = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,11 +47,11 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxOgrenciSoyad = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbxKulup = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxCinsiyet = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -114,12 +114,12 @@
             this.btnListele.Text = "Listele";
             this.btnListele.UseVisualStyleBackColor = true;
             // 
-            // tbxDersAd
+            // tbxOgrenciAd
             // 
-            this.tbxDersAd.Location = new System.Drawing.Point(195, 46);
-            this.tbxDersAd.Name = "tbxDersAd";
-            this.tbxDersAd.Size = new System.Drawing.Size(144, 20);
-            this.tbxDersAd.TabIndex = 3;
+            this.tbxOgrenciAd.Location = new System.Drawing.Point(195, 46);
+            this.tbxOgrenciAd.Name = "tbxOgrenciAd";
+            this.tbxOgrenciAd.Size = new System.Drawing.Size(144, 20);
+            this.tbxOgrenciAd.TabIndex = 3;
             // 
             // label3
             // 
@@ -132,13 +132,13 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "ÖĞRENCİ AD:";
             // 
-            // tbxDersId
+            // tbxOgrenciId
             // 
-            this.tbxDersId.Enabled = false;
-            this.tbxDersId.Location = new System.Drawing.Point(195, 20);
-            this.tbxDersId.Name = "tbxDersId";
-            this.tbxDersId.Size = new System.Drawing.Size(144, 20);
-            this.tbxDersId.TabIndex = 1;
+            this.tbxOgrenciId.Enabled = false;
+            this.tbxOgrenciId.Location = new System.Drawing.Point(195, 20);
+            this.tbxOgrenciId.Name = "tbxOgrenciId";
+            this.tbxOgrenciId.Size = new System.Drawing.Size(144, 20);
+            this.tbxOgrenciId.TabIndex = 1;
             // 
             // pictureBox5
             // 
@@ -200,14 +200,14 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbxCinsiyet);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.tbxKulup);
+            this.groupBox1.Controls.Add(this.tbxOgrenciSoyad);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.tbxDersAd);
+            this.groupBox1.Controls.Add(this.tbxOgrenciAd);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.tbxDersId);
+            this.groupBox1.Controls.Add(this.tbxOgrenciId);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 215);
             this.groupBox1.Name = "groupBox1";
@@ -256,12 +256,12 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "ÖĞRENCİ İŞLEMLERİ PANELİ";
             // 
-            // textBox1
+            // tbxOgrenciSoyad
             // 
-            this.textBox1.Location = new System.Drawing.Point(195, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 20);
-            this.textBox1.TabIndex = 5;
+            this.tbxOgrenciSoyad.Location = new System.Drawing.Point(195, 72);
+            this.tbxOgrenciSoyad.Name = "tbxOgrenciSoyad";
+            this.tbxOgrenciSoyad.Size = new System.Drawing.Size(144, 20);
+            this.tbxOgrenciSoyad.TabIndex = 5;
             // 
             // label4
             // 
@@ -274,12 +274,12 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "ÖĞRENCİ SOYAD:";
             // 
-            // textBox2
+            // tbxKulup
             // 
-            this.textBox2.Location = new System.Drawing.Point(195, 98);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(144, 20);
-            this.textBox2.TabIndex = 6;
+            this.tbxKulup.Location = new System.Drawing.Point(195, 98);
+            this.tbxKulup.Name = "tbxKulup";
+            this.tbxKulup.Size = new System.Drawing.Size(144, 20);
+            this.tbxKulup.TabIndex = 6;
             // 
             // label5
             // 
@@ -292,17 +292,17 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "KULÜP:";
             // 
-            // comboBox1
+            // cbxCinsiyet
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbxCinsiyet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCinsiyet.FormattingEnabled = true;
+            this.cbxCinsiyet.Items.AddRange(new object[] {
             "ERKEK",
             "KIZ"});
-            this.comboBox1.Location = new System.Drawing.Point(195, 125);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(144, 21);
-            this.comboBox1.TabIndex = 8;
+            this.cbxCinsiyet.Location = new System.Drawing.Point(195, 125);
+            this.cbxCinsiyet.Name = "cbxCinsiyet";
+            this.cbxCinsiyet.Size = new System.Drawing.Size(144, 21);
+            this.cbxCinsiyet.TabIndex = 8;
             // 
             // label6
             // 
@@ -355,9 +355,9 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnListele;
-        private System.Windows.Forms.TextBox tbxDersAd;
+        private System.Windows.Forms.TextBox tbxOgrenciAd;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbxDersId;
+        private System.Windows.Forms.TextBox tbxOgrenciId;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label2;
@@ -369,10 +369,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxCinsiyet;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxKulup;
+        private System.Windows.Forms.TextBox tbxOgrenciSoyad;
         private System.Windows.Forms.Label label4;
     }
 }

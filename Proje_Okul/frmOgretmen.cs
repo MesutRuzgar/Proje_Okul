@@ -17,18 +17,25 @@ namespace Proje_Okul
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+           
+        private void btnOgretmenler_Click(object sender, EventArgs e)
         {
-            frmDersIslemleri fr = new frmDersIslemleri();
+            frmOgretmenler fr = new frmOgretmenler();
             fr.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnOgrenciIslemleri_Click(object sender, EventArgs e)
         {
             frmOgrenciIslemleri fr = new frmOgrenciIslemleri();
             {
                 fr.Show();
             }
+        }
+
+        private void btnDersIslemleri_Click(object sender, EventArgs e)
+        {
+            frmDersIslemleri fr = new frmDersIslemleri();
+            fr.Show();
         }
     }
 }

@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOgretmen));
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDersIslemleri = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnOgrenciIslemleri = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnSinavNotları = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnOgretmenler = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnKulup = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -46,15 +46,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnDersIslemleri
             // 
-            this.button1.Location = new System.Drawing.Point(12, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 50);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Ders İşlemleri";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnDersIslemleri.Location = new System.Drawing.Point(12, 13);
+            this.btnDersIslemleri.Name = "btnDersIslemleri";
+            this.btnDersIslemleri.Size = new System.Drawing.Size(131, 50);
+            this.btnDersIslemleri.TabIndex = 0;
+            this.btnDersIslemleri.Text = "Ders İşlemleri";
+            this.btnDersIslemleri.UseVisualStyleBackColor = true;
+            this.btnDersIslemleri.Click += new System.EventHandler(this.btnDersIslemleri_Click);
             // 
             // pictureBox1
             // 
@@ -76,15 +76,15 @@
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
-            // button2
+            // btnOgrenciIslemleri
             // 
-            this.button2.Location = new System.Drawing.Point(12, 69);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 50);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Öğrenci İşlemleri";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnOgrenciIslemleri.Location = new System.Drawing.Point(12, 69);
+            this.btnOgrenciIslemleri.Name = "btnOgrenciIslemleri";
+            this.btnOgrenciIslemleri.Size = new System.Drawing.Size(131, 50);
+            this.btnOgrenciIslemleri.TabIndex = 2;
+            this.btnOgrenciIslemleri.Text = "Öğrenci İşlemleri";
+            this.btnOgrenciIslemleri.UseVisualStyleBackColor = true;
+            this.btnOgrenciIslemleri.Click += new System.EventHandler(this.btnOgrenciIslemleri_Click);
             // 
             // pictureBox3
             // 
@@ -96,14 +96,14 @@
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
             // 
-            // button3
+            // btnSinavNotları
             // 
-            this.button3.Location = new System.Drawing.Point(12, 181);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(131, 50);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Sınav Notları";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSinavNotları.Location = new System.Drawing.Point(12, 181);
+            this.btnSinavNotları.Name = "btnSinavNotları";
+            this.btnSinavNotları.Size = new System.Drawing.Size(131, 50);
+            this.btnSinavNotları.TabIndex = 6;
+            this.btnSinavNotları.Text = "Sınav Notları";
+            this.btnSinavNotları.UseVisualStyleBackColor = true;
             // 
             // pictureBox4
             // 
@@ -115,14 +115,15 @@
             this.pictureBox4.TabIndex = 5;
             this.pictureBox4.TabStop = false;
             // 
-            // button4
+            // btnOgretmenler
             // 
-            this.button4.Location = new System.Drawing.Point(12, 125);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(131, 50);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Öğretmenler";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnOgretmenler.Location = new System.Drawing.Point(12, 125);
+            this.btnOgretmenler.Name = "btnOgretmenler";
+            this.btnOgretmenler.Size = new System.Drawing.Size(131, 50);
+            this.btnOgretmenler.TabIndex = 4;
+            this.btnOgretmenler.Text = "Öğretmenler";
+            this.btnOgretmenler.UseVisualStyleBackColor = true;
+            this.btnOgretmenler.Click += new System.EventHandler(this.btnOgretmenler_Click);
             // 
             // pictureBox5
             // 
@@ -134,14 +135,14 @@
             this.pictureBox5.TabIndex = 9;
             this.pictureBox5.TabStop = false;
             // 
-            // button5
+            // btnKulup
             // 
-            this.button5.Location = new System.Drawing.Point(12, 237);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(131, 50);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Kulüp İşlemleri";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnKulup.Location = new System.Drawing.Point(12, 237);
+            this.btnKulup.Name = "btnKulup";
+            this.btnKulup.Size = new System.Drawing.Size(131, 50);
+            this.btnKulup.TabIndex = 8;
+            this.btnKulup.Text = "Kulüp İşlemleri";
+            this.btnKulup.UseVisualStyleBackColor = true;
             // 
             // frmOgretmen
             // 
@@ -151,15 +152,15 @@
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(253, 306);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnKulup);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnSinavNotları);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnOgretmenler);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnOgrenciIslemleri);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDersIslemleri);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
@@ -177,15 +178,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDersIslemleri;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnOgrenciIslemleri;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnSinavNotları;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnOgretmenler;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnKulup;
     }
 }
