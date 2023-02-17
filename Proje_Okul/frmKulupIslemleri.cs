@@ -40,5 +40,17 @@ namespace Proje_Okul
         {
             Liste();
         }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("insert into tbl_kulupler (KulupAd) values (@p1)",baglanti);
+            komut.Parameters.AddWithValue("@p1",tbxKulupAd.Text);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Ekleme işlemi başarılı.","Bilgi",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            Liste();
+           
+        }
     }
 }
