@@ -78,5 +78,17 @@ namespace Proje_Okul
             tbxKulupId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             tbxKulupAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("Delete from tbl_kulupler where kulupId=@p1", baglanti);
+            komut.Parameters.AddWithValue("@p1", tbxKulupId.Text);
+            komut.ExecuteNonQuery() ;
+            baglanti.Close();
+            MessageBox.Show("Silme işlemi başarılı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Liste();
+            Temizle();
+        }
     }
 }
