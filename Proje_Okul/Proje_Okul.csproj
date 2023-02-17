@@ -58,6 +58,12 @@
     <Compile Include="frmDersIslemleri.Designer.cs">
       <DependentUpon>frmDersIslemleri.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmKulupIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKulupIslemleri.Designer.cs">
+      <DependentUpon>frmKulupIslemleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmOgrenciIslemleri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,12 @@
     <Compile Include="frmOgretmenler.Designer.cs">
       <DependentUpon>frmOgretmenler.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSınavIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSınavIslemleri.Designer.cs">
+      <DependentUpon>frmSınavIslemleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -89,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDersIslemleri.resx">
       <DependentUpon>frmDersIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKulupIslemleri.resx">
+      <DependentUpon>frmKulupIslemleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmOgrenciIslemleri.resx">
       <DependentUpon>frmOgrenciIslemleri.cs</DependentUpon>
@@ -101,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmOgretmenler.resx">
       <DependentUpon>frmOgretmenler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSınavIslemleri.resx">
+      <DependentUpon>frmSınavIslemleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

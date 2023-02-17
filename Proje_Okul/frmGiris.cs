@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Proje_Okul
 {
-    public partial class Form1 : Form
+    public partial class frmGiris : Form
     {
-        public Form1()
+        public frmGiris()
         {
             InitializeComponent();
         }

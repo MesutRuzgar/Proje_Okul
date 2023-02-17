@@ -51,7 +51,7 @@
             this.btnDersIslemleri.Location = new System.Drawing.Point(12, 13);
             this.btnDersIslemleri.Name = "btnDersIslemleri";
             this.btnDersIslemleri.Size = new System.Drawing.Size(131, 50);
-            this.btnDersIslemleri.TabIndex = 0;
+            this.btnDersIslemleri.TabIndex = 1;
             this.btnDersIslemleri.Text = "Ders İşlemleri";
             this.btnDersIslemleri.UseVisualStyleBackColor = true;
             this.btnDersIslemleri.Click += new System.EventHandler(this.btnDersIslemleri_Click);
@@ -101,9 +101,10 @@
             this.btnSinavNotları.Location = new System.Drawing.Point(12, 181);
             this.btnSinavNotları.Name = "btnSinavNotları";
             this.btnSinavNotları.Size = new System.Drawing.Size(131, 50);
-            this.btnSinavNotları.TabIndex = 6;
+            this.btnSinavNotları.TabIndex = 4;
             this.btnSinavNotları.Text = "Sınav Notları";
             this.btnSinavNotları.UseVisualStyleBackColor = true;
+            this.btnSinavNotları.Click += new System.EventHandler(this.btnSinavNotları_Click);
             // 
             // pictureBox4
             // 
@@ -120,7 +121,7 @@
             this.btnOgretmenler.Location = new System.Drawing.Point(12, 125);
             this.btnOgretmenler.Name = "btnOgretmenler";
             this.btnOgretmenler.Size = new System.Drawing.Size(131, 50);
-            this.btnOgretmenler.TabIndex = 4;
+            this.btnOgretmenler.TabIndex = 3;
             this.btnOgretmenler.Text = "Öğretmenler";
             this.btnOgretmenler.UseVisualStyleBackColor = true;
             this.btnOgretmenler.Click += new System.EventHandler(this.btnOgretmenler_Click);
@@ -140,9 +141,10 @@
             this.btnKulup.Location = new System.Drawing.Point(12, 237);
             this.btnKulup.Name = "btnKulup";
             this.btnKulup.Size = new System.Drawing.Size(131, 50);
-            this.btnKulup.TabIndex = 8;
+            this.btnKulup.TabIndex = 5;
             this.btnKulup.Text = "Kulüp İşlemleri";
             this.btnKulup.UseVisualStyleBackColor = true;
+            this.btnKulup.Click += new System.EventHandler(this.btnKulup_Click);
             // 
             // frmOgretmen
             // 

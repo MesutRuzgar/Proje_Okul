@@ -116,7 +116,7 @@
             this.tbxDersAd.Location = new System.Drawing.Point(132, 59);
             this.tbxDersAd.Name = "tbxDersAd";
             this.tbxDersAd.Size = new System.Drawing.Size(207, 26);
-            this.tbxDersAd.TabIndex = 3;
+            this.tbxDersAd.TabIndex = 2;
             // 
             // label3
             // 
