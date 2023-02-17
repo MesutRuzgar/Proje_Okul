@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Proje_Okul
 {
-    public partial class frmDersIslemleri : Form
+    public partial class frmOgrenciIslemleri : Form
     {
-        public frmDersIslemleri()
+        public frmOgrenciIslemleri()
         {
             InitializeComponent();
         }
@@ -20,11 +20,6 @@ namespace Proje_Okul
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void frmDersIslemleri_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -58,6 +58,12 @@
     <Compile Include="frmDersIslemleri.Designer.cs">
       <DependentUpon>frmDersIslemleri.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmOgrenciIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOgrenciIslemleri.Designer.cs">
+      <DependentUpon>frmOgrenciIslemleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmOgrenciNotlar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDersIslemleri.resx">
       <DependentUpon>frmDersIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOgrenciIslemleri.resx">
+      <DependentUpon>frmOgrenciIslemleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmOgrenciNotlar.resx">
       <DependentUpon>frmOgrenciNotlar.cs</DependentUpon>
