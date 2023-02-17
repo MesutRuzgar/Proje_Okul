@@ -24,7 +24,8 @@ namespace Proje_Okul
 
         private void frmDersIslemleri_Load(object sender, EventArgs e)
         {
-
+            DataSet1TableAdapters.Tbl_DerslerTableAdapter ds = new DataSet1TableAdapters.Tbl_DerslerTableAdapter();
+            dataGridView1.DataSource= ds.DersListesi();
         }
     }
 }

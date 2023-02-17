@@ -35,6 +35,7 @@ namespace Proje_Okul
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
+            
         }
 
         private void frmKulupIslemleri_Load(object sender, EventArgs e)
