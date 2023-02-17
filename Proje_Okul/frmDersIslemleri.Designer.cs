@@ -206,6 +206,7 @@
             this.btnGuncelle.TabIndex = 8;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // pictureBox4
             // 
