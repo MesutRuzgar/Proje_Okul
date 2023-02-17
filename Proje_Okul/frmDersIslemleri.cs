@@ -22,10 +22,29 @@ namespace Proje_Okul
             this.Close();
         }
 
+        DataSet1TableAdapters.Tbl_DerslerTableAdapter ds = new DataSet1TableAdapters.Tbl_DerslerTableAdapter();
+
+        void Liste()
+        {
+            dataGridView1.DataSource = ds.DersListesi();
+        }
+
         private void frmDersIslemleri_Load(object sender, EventArgs e)
         {
-            DataSet1TableAdapters.Tbl_DerslerTableAdapter ds = new DataSet1TableAdapters.Tbl_DerslerTableAdapter();
-            dataGridView1.DataSource= ds.DersListesi();
+            Liste();
+            
+        }
+
+        private void btnListele_Click(object sender, EventArgs e)
+        {
+            Liste();
+        }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+            ds.DersEkle(tbxDersAd.Text);
+            MessageBox.Show("Ders başarıyla eklendi.","Bilgi",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Liste();
         }
     }
 }
