@@ -26,6 +26,12 @@ namespace Proje_Okul
             dataGridView1.DataSource = dt;
         }
 
+        void Temizle()
+        {
+            tbxKulupId.Text = "";
+            tbxKulupAd.Text = "";
+        }
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -50,7 +56,27 @@ namespace Proje_Okul
             baglanti.Close();
             MessageBox.Show("Ekleme işlemi başarılı.","Bilgi",MessageBoxButtons.OK,MessageBoxIcon.Information);
             Liste();
+            Temizle();
            
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("update tbl_kulupler set KulupAd=@p1 where KulupId=@p2", baglanti);
+            komut.Parameters.AddWithValue("@p1", tbxKulupAd.Text);
+            komut.Parameters.AddWithValue("@p2",tbxKulupId.Text); 
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Güncelleme işlemi başarılı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Liste();
+            Temizle();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tbxKulupId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            tbxKulupAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
     }
 }
