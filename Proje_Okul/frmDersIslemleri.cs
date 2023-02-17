@@ -28,11 +28,16 @@ namespace Proje_Okul
         {
             dataGridView1.DataSource = ds.DersListesi();
         }
+        void Temizle()
+        {
+            tbxDersId.Text = "";
+            tbxDersAd.Text = "";
+        }
 
         private void frmDersIslemleri_Load(object sender, EventArgs e)
         {
             Liste();
-            
+
         }
 
         private void btnListele_Click(object sender, EventArgs e)
@@ -43,8 +48,24 @@ namespace Proje_Okul
         private void btnEkle_Click(object sender, EventArgs e)
         {
             ds.DersEkle(tbxDersAd.Text);
-            MessageBox.Show("Ders başarıyla eklendi.","Bilgi",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Ders başarıyla eklendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Liste();
+            Temizle();
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            ds.DersSil(byte.Parse(tbxDersId.Text));
+            MessageBox.Show("Ders başarıyla silindi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Liste();
+            Temizle();
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tbxDersId.Text= dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            tbxDersAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
     }
 }
