@@ -90,6 +90,28 @@ SELECT DersId AS [Ders No], DersAd AS [Ders Adı] FROM Tbl_Dersler WHERE (DersId
               </DbSource>
             </Sources>
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProjeOkulConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="OgrenciListe" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="OgrenciListe" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="OgrenciListe" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Tbl_Ogrenciler.OgrenciId AS [Öğrenci No], Tbl_Ogrenciler.OgrenciAd AS Ad, Tbl_Ogrenciler.OgrenciSoyad AS Soyad, Tbl_Ogrenciler.OgrenciCinsiyet AS Cinsiyet, Tbl_Kulupler.KulupAd AS Kulüp
+FROM            Tbl_Ogrenciler INNER JOIN
+                         Tbl_Kulupler ON Tbl_Ogrenciler.OgrenciKlup = Tbl_Kulupler.KulupId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Öğrenci No" DataSetColumn="Öğrenci No" />
+              <Mapping SourceColumn="Ad" DataSetColumn="Ad" />
+              <Mapping SourceColumn="Soyad" DataSetColumn="Soyad" />
+              <Mapping SourceColumn="Cinsiyet" DataSetColumn="Cinsiyet" />
+              <Mapping SourceColumn="Kulüp" DataSetColumn="Kulüp" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -112,11 +134,50 @@ SELECT DersId AS [Ders No], DersAd AS [Ders Adı] FROM Tbl_Dersler WHERE (DersId
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="DataTable1" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_UserTableName="DataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Öğrenci_x0020_No" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="Öğrenci_No" msprop:Generator_ColumnPropNameInTable="Öğrenci_NoColumn" msprop:Generator_ColumnVarNameInTable="columnÖğrenci_No" msprop:Generator_UserColumnName="Öğrenci No" type="xs:int" />
+              <xs:element name="Ad" msprop:Generator_ColumnPropNameInRow="Ad" msprop:Generator_ColumnPropNameInTable="AdColumn" msprop:Generator_ColumnVarNameInTable="columnAd" msprop:Generator_UserColumnName="Ad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Soyad" msprop:Generator_ColumnPropNameInRow="Soyad" msprop:Generator_ColumnPropNameInTable="SoyadColumn" msprop:Generator_ColumnVarNameInTable="columnSoyad" msprop:Generator_UserColumnName="Soyad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cinsiyet" msprop:Generator_ColumnPropNameInRow="Cinsiyet" msprop:Generator_ColumnPropNameInTable="CinsiyetColumn" msprop:Generator_ColumnVarNameInTable="columnCinsiyet" msprop:Generator_UserColumnName="Cinsiyet" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Kulüp" msprop:Generator_ColumnPropNameInRow="Kulüp" msprop:Generator_ColumnPropNameInTable="KulüpColumn" msprop:Generator_ColumnVarNameInTable="columnKulüp" msprop:Generator_UserColumnName="Kulüp" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Tbl_Dersler" />
       <xs:field xpath="mstns:Ders_x0020_No" />
+    </xs:unique>
+    <xs:unique name="DataTable1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:Öğrenci_x0020_No" />
     </xs:unique>
   </xs:element>
 </xs:schema>
