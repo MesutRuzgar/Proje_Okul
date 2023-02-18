@@ -180,6 +180,7 @@
             this.btnEkle.TabIndex = 1;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // groupBox2
             // 

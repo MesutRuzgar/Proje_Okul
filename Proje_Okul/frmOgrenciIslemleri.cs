@@ -16,10 +16,18 @@ namespace Proje_Okul
         {
             InitializeComponent();
         }
-        DataSet1TableAdapters.DataTable1TableAdapter ds = new DataSet1TableAdapters.DataTable1TableAdapter();
+        DataSet1TableAdapters.Tbl_OgrencilerTableAdapter ds = new DataSet1TableAdapters.Tbl_OgrencilerTableAdapter();
         void Liste()
         {
             dataGridView1.DataSource = ds.OgrenciListe();
+        }
+        void Temizle()
+        {
+            tbxOgrenciId.Text = "";
+            tbxOgrenciAd.Text = "";
+            tbxOgrenciSoyad.Text = "";
+            tbxKulup.Text = "";
+            cbxCinsiyet.Text = "";
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -41,6 +49,14 @@ namespace Proje_Okul
             cbxCinsiyet.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
 
 
+        }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+            ds.OgrenciEkle(tbxOgrenciAd.Text, tbxOgrenciSoyad.Text, byte.Parse(tbxKulup.Text), cbxCinsiyet.Text);
+            MessageBox.Show("Öğrenci başarıyla eklendi.","Bilgi",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Liste();
+            Temizle();
         }
     }
 }

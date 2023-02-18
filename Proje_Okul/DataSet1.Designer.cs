@@ -26,7 +26,7 @@ namespace Proje_Okul {
         
         private Tbl_DerslerDataTable tableTbl_Dersler;
         
-        private DataTable1DataTable tableDataTable1;
+        private Tbl_OgrencilerDataTable tableTbl_Ogrenciler;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -59,8 +59,8 @@ namespace Proje_Okul {
                 if ((ds.Tables["Tbl_Dersler"] != null)) {
                     base.Tables.Add(new Tbl_DerslerDataTable(ds.Tables["Tbl_Dersler"]));
                 }
-                if ((ds.Tables["DataTable1"] != null)) {
-                    base.Tables.Add(new DataTable1DataTable(ds.Tables["DataTable1"]));
+                if ((ds.Tables["Tbl_Ogrenciler"] != null)) {
+                    base.Tables.Add(new Tbl_OgrencilerDataTable(ds.Tables["Tbl_Ogrenciler"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -94,9 +94,9 @@ namespace Proje_Okul {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DataTable1DataTable DataTable1 {
+        public Tbl_OgrencilerDataTable Tbl_Ogrenciler {
             get {
-                return this.tableDataTable1;
+                return this.tableTbl_Ogrenciler;
             }
         }
         
@@ -170,8 +170,8 @@ namespace Proje_Okul {
                 if ((ds.Tables["Tbl_Dersler"] != null)) {
                     base.Tables.Add(new Tbl_DerslerDataTable(ds.Tables["Tbl_Dersler"]));
                 }
-                if ((ds.Tables["DataTable1"] != null)) {
-                    base.Tables.Add(new DataTable1DataTable(ds.Tables["DataTable1"]));
+                if ((ds.Tables["Tbl_Ogrenciler"] != null)) {
+                    base.Tables.Add(new Tbl_OgrencilerDataTable(ds.Tables["Tbl_Ogrenciler"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -212,10 +212,10 @@ namespace Proje_Okul {
                     this.tableTbl_Dersler.InitVars();
                 }
             }
-            this.tableDataTable1 = ((DataTable1DataTable)(base.Tables["DataTable1"]));
+            this.tableTbl_Ogrenciler = ((Tbl_OgrencilerDataTable)(base.Tables["Tbl_Ogrenciler"]));
             if ((initTable == true)) {
-                if ((this.tableDataTable1 != null)) {
-                    this.tableDataTable1.InitVars();
+                if ((this.tableTbl_Ogrenciler != null)) {
+                    this.tableTbl_Ogrenciler.InitVars();
                 }
             }
         }
@@ -230,8 +230,8 @@ namespace Proje_Okul {
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableTbl_Dersler = new Tbl_DerslerDataTable();
             base.Tables.Add(this.tableTbl_Dersler);
-            this.tableDataTable1 = new DataTable1DataTable();
-            base.Tables.Add(this.tableDataTable1);
+            this.tableTbl_Ogrenciler = new Tbl_OgrencilerDataTable();
+            base.Tables.Add(this.tableTbl_Ogrenciler);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -242,7 +242,7 @@ namespace Proje_Okul {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeDataTable1() {
+        private bool ShouldSerializeTbl_Ogrenciler() {
             return false;
         }
         
@@ -305,7 +305,7 @@ namespace Proje_Okul {
         public delegate void Tbl_DerslerRowChangeEventHandler(object sender, Tbl_DerslerRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void DataTable1RowChangeEventHandler(object sender, DataTable1RowChangeEvent e);
+        public delegate void Tbl_OgrencilerRowChangeEventHandler(object sender, Tbl_OgrencilerRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -586,7 +586,7 @@ namespace Proje_Okul {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DataTable1DataTable : global::System.Data.TypedTableBase<DataTable1Row> {
+        public partial class Tbl_OgrencilerDataTable : global::System.Data.TypedTableBase<Tbl_OgrencilerRow> {
             
             private global::System.Data.DataColumn columnÖğrenci_No;
             
@@ -600,8 +600,8 @@ namespace Proje_Okul {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DataTable1DataTable() {
-                this.TableName = "DataTable1";
+            public Tbl_OgrencilerDataTable() {
+                this.TableName = "Tbl_Ogrenciler";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -609,7 +609,7 @@ namespace Proje_Okul {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal DataTable1DataTable(global::System.Data.DataTable table) {
+            internal Tbl_OgrencilerDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -626,7 +626,7 @@ namespace Proje_Okul {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected DataTable1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected Tbl_OgrencilerDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -682,56 +682,56 @@ namespace Proje_Okul {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DataTable1Row this[int index] {
+            public Tbl_OgrencilerRow this[int index] {
                 get {
-                    return ((DataTable1Row)(this.Rows[index]));
+                    return ((Tbl_OgrencilerRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowChanging;
+            public event Tbl_OgrencilerRowChangeEventHandler Tbl_OgrencilerRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowChanged;
+            public event Tbl_OgrencilerRowChangeEventHandler Tbl_OgrencilerRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowDeleting;
+            public event Tbl_OgrencilerRowChangeEventHandler Tbl_OgrencilerRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowDeleted;
+            public event Tbl_OgrencilerRowChangeEventHandler Tbl_OgrencilerRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddDataTable1Row(DataTable1Row row) {
+            public void AddTbl_OgrencilerRow(Tbl_OgrencilerRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DataTable1Row AddDataTable1Row(string Ad, string Soyad, string Cinsiyet, string Kulüp) {
-                DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
+            public Tbl_OgrencilerRow AddTbl_OgrencilerRow(string Ad, string Soyad, string Cinsiyet, string Kulüp) {
+                Tbl_OgrencilerRow rowTbl_OgrencilerRow = ((Tbl_OgrencilerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Ad,
                         Soyad,
                         Cinsiyet,
                         Kulüp};
-                rowDataTable1Row.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDataTable1Row);
-                return rowDataTable1Row;
+                rowTbl_OgrencilerRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTbl_OgrencilerRow);
+                return rowTbl_OgrencilerRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DataTable1Row FindByÖğrenci_No(int Öğrenci_No) {
-                return ((DataTable1Row)(this.Rows.Find(new object[] {
+            public Tbl_OgrencilerRow FindByÖğrenci_No(int Öğrenci_No) {
+                return ((Tbl_OgrencilerRow)(this.Rows.Find(new object[] {
                             Öğrenci_No})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                DataTable1DataTable cln = ((DataTable1DataTable)(base.Clone()));
+                Tbl_OgrencilerDataTable cln = ((Tbl_OgrencilerDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -739,7 +739,7 @@ namespace Proje_Okul {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new DataTable1DataTable();
+                return new Tbl_OgrencilerDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -781,28 +781,28 @@ namespace Proje_Okul {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DataTable1Row NewDataTable1Row() {
-                return ((DataTable1Row)(this.NewRow()));
+            public Tbl_OgrencilerRow NewTbl_OgrencilerRow() {
+                return ((Tbl_OgrencilerRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DataTable1Row(builder);
+                return new Tbl_OgrencilerRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(DataTable1Row);
+                return typeof(Tbl_OgrencilerRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.DataTable1RowChanged != null)) {
-                    this.DataTable1RowChanged(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.Tbl_OgrencilerRowChanged != null)) {
+                    this.Tbl_OgrencilerRowChanged(this, new Tbl_OgrencilerRowChangeEvent(((Tbl_OgrencilerRow)(e.Row)), e.Action));
                 }
             }
             
@@ -810,8 +810,8 @@ namespace Proje_Okul {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.DataTable1RowChanging != null)) {
-                    this.DataTable1RowChanging(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.Tbl_OgrencilerRowChanging != null)) {
+                    this.Tbl_OgrencilerRowChanging(this, new Tbl_OgrencilerRowChangeEvent(((Tbl_OgrencilerRow)(e.Row)), e.Action));
                 }
             }
             
@@ -819,8 +819,8 @@ namespace Proje_Okul {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.DataTable1RowDeleted != null)) {
-                    this.DataTable1RowDeleted(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.Tbl_OgrencilerRowDeleted != null)) {
+                    this.Tbl_OgrencilerRowDeleted(this, new Tbl_OgrencilerRowChangeEvent(((Tbl_OgrencilerRow)(e.Row)), e.Action));
                 }
             }
             
@@ -828,14 +828,14 @@ namespace Proje_Okul {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.DataTable1RowDeleting != null)) {
-                    this.DataTable1RowDeleting(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.Tbl_OgrencilerRowDeleting != null)) {
+                    this.Tbl_OgrencilerRowDeleting(this, new Tbl_OgrencilerRowChangeEvent(((Tbl_OgrencilerRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveDataTable1Row(DataTable1Row row) {
+            public void RemoveTbl_OgrencilerRow(Tbl_OgrencilerRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -862,7 +862,7 @@ namespace Proje_Okul {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DataTable1DataTable";
+                attribute2.FixedValue = "Tbl_OgrencilerDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -960,25 +960,25 @@ namespace Proje_Okul {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class DataTable1Row : global::System.Data.DataRow {
+        public partial class Tbl_OgrencilerRow : global::System.Data.DataRow {
             
-            private DataTable1DataTable tableDataTable1;
+            private Tbl_OgrencilerDataTable tableTbl_Ogrenciler;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal DataTable1Row(global::System.Data.DataRowBuilder rb) : 
+            internal Tbl_OgrencilerRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableDataTable1 = ((DataTable1DataTable)(this.Table));
+                this.tableTbl_Ogrenciler = ((Tbl_OgrencilerDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int Öğrenci_No {
                 get {
-                    return ((int)(this[this.tableDataTable1.Öğrenci_NoColumn]));
+                    return ((int)(this[this.tableTbl_Ogrenciler.Öğrenci_NoColumn]));
                 }
                 set {
-                    this[this.tableDataTable1.Öğrenci_NoColumn] = value;
+                    this[this.tableTbl_Ogrenciler.Öğrenci_NoColumn] = value;
                 }
             }
             
@@ -987,14 +987,14 @@ namespace Proje_Okul {
             public string Ad {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.AdColumn]));
+                        return ((string)(this[this.tableTbl_Ogrenciler.AdColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Ad\' in table \'DataTable1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Ad\' in table \'Tbl_Ogrenciler\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.AdColumn] = value;
+                    this[this.tableTbl_Ogrenciler.AdColumn] = value;
                 }
             }
             
@@ -1003,14 +1003,14 @@ namespace Proje_Okul {
             public string Soyad {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.SoyadColumn]));
+                        return ((string)(this[this.tableTbl_Ogrenciler.SoyadColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Soyad\' in table \'DataTable1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Soyad\' in table \'Tbl_Ogrenciler\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.SoyadColumn] = value;
+                    this[this.tableTbl_Ogrenciler.SoyadColumn] = value;
                 }
             }
             
@@ -1019,14 +1019,14 @@ namespace Proje_Okul {
             public string Cinsiyet {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.CinsiyetColumn]));
+                        return ((string)(this[this.tableTbl_Ogrenciler.CinsiyetColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cinsiyet\' in table \'DataTable1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Cinsiyet\' in table \'Tbl_Ogrenciler\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.CinsiyetColumn] = value;
+                    this[this.tableTbl_Ogrenciler.CinsiyetColumn] = value;
                 }
             }
             
@@ -1035,63 +1035,63 @@ namespace Proje_Okul {
             public string Kulüp {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.KulüpColumn]));
+                        return ((string)(this[this.tableTbl_Ogrenciler.KulüpColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Kulüp\' in table \'DataTable1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Kulüp\' in table \'Tbl_Ogrenciler\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.KulüpColumn] = value;
+                    this[this.tableTbl_Ogrenciler.KulüpColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsAdNull() {
-                return this.IsNull(this.tableDataTable1.AdColumn);
+                return this.IsNull(this.tableTbl_Ogrenciler.AdColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetAdNull() {
-                this[this.tableDataTable1.AdColumn] = global::System.Convert.DBNull;
+                this[this.tableTbl_Ogrenciler.AdColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsSoyadNull() {
-                return this.IsNull(this.tableDataTable1.SoyadColumn);
+                return this.IsNull(this.tableTbl_Ogrenciler.SoyadColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetSoyadNull() {
-                this[this.tableDataTable1.SoyadColumn] = global::System.Convert.DBNull;
+                this[this.tableTbl_Ogrenciler.SoyadColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsCinsiyetNull() {
-                return this.IsNull(this.tableDataTable1.CinsiyetColumn);
+                return this.IsNull(this.tableTbl_Ogrenciler.CinsiyetColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetCinsiyetNull() {
-                this[this.tableDataTable1.CinsiyetColumn] = global::System.Convert.DBNull;
+                this[this.tableTbl_Ogrenciler.CinsiyetColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsKulüpNull() {
-                return this.IsNull(this.tableDataTable1.KulüpColumn);
+                return this.IsNull(this.tableTbl_Ogrenciler.KulüpColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetKulüpNull() {
-                this[this.tableDataTable1.KulüpColumn] = global::System.Convert.DBNull;
+                this[this.tableTbl_Ogrenciler.KulüpColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1133,22 +1133,22 @@ namespace Proje_Okul {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class DataTable1RowChangeEvent : global::System.EventArgs {
+        public class Tbl_OgrencilerRowChangeEvent : global::System.EventArgs {
             
-            private DataTable1Row eventRow;
+            private Tbl_OgrencilerRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DataTable1RowChangeEvent(DataTable1Row row, global::System.Data.DataRowAction action) {
+            public Tbl_OgrencilerRowChangeEvent(Tbl_OgrencilerRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DataTable1Row Row {
+            public Tbl_OgrencilerRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -1597,7 +1597,7 @@ SELECT DersId AS [Ders No], DersAd AS [Ders Adı] FROM Tbl_Dersler WHERE (DersId
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class DataTable1TableAdapter : global::System.ComponentModel.Component {
+    public partial class Tbl_OgrencilerTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -1611,7 +1611,7 @@ SELECT DersId AS [Ders No], DersAd AS [Ders Adı] FROM Tbl_Dersler WHERE (DersId
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public DataTable1TableAdapter() {
+        public Tbl_OgrencilerTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1708,7 +1708,7 @@ SELECT DersId AS [Ders No], DersAd AS [Ders Adı] FROM Tbl_Dersler WHERE (DersId
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "DataTable1";
+            tableMapping.DataSetTable = "Tbl_Ogrenciler";
             tableMapping.ColumnMappings.Add("Öğrenci No", "Öğrenci No");
             tableMapping.ColumnMappings.Add("Ad", "Ad");
             tableMapping.ColumnMappings.Add("Soyad", "Soyad");
@@ -1727,20 +1727,30 @@ SELECT DersId AS [Ders No], DersAd AS [Ders Adı] FROM Tbl_Dersler WHERE (DersId
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        Tbl_Ogrenciler.OgrenciId AS [Öğrenci No], Tbl_Ogrenciler.OgrenciAd AS Ad, Tbl_Ogrenciler.OgrenciSoyad AS Soyad, Tbl_Ogrenciler.OgrenciCinsiyet AS Cinsiyet, Tbl_Kulupler.KulupAd AS Kulüp
 FROM            Tbl_Ogrenciler INNER JOIN
                          Tbl_Kulupler ON Tbl_Ogrenciler.OgrenciKlup = Tbl_Kulupler.KulupId";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "INSERT INTO Tbl_Ogrenciler\r\n                         (OgrenciAd, OgrenciSoyad, Og" +
+                "renciKlup, OgrenciCinsiyet)\r\nVALUES        (@OGRAD,@OGRSOYAD,@OGRKULUP,@OGRCINSI" +
+                "YET)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRAD", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciAd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRSOYAD", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciSoyad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRKULUP", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciKlup", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRCINSIYET", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciCinsiyet", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet1.DataTable1DataTable dataTable) {
+        public virtual int Fill(DataSet1.Tbl_OgrencilerDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1753,11 +1763,58 @@ FROM            Tbl_Ogrenciler INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet1.DataTable1DataTable OgrenciListe() {
+        public virtual DataSet1.Tbl_OgrencilerDataTable OgrenciListe() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet1.DataTable1DataTable dataTable = new DataSet1.DataTable1DataTable();
+            DataSet1.Tbl_OgrencilerDataTable dataTable = new DataSet1.Tbl_OgrencilerDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int OgrenciEkle(string OGRAD, string OGRSOYAD, global::System.Nullable<byte> OGRKULUP, string OGRCINSIYET) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((OGRAD == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(OGRAD));
+            }
+            if ((OGRSOYAD == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(OGRSOYAD));
+            }
+            if ((OGRKULUP.HasValue == true)) {
+                command.Parameters[2].Value = ((byte)(OGRKULUP.Value));
+            }
+            else {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((OGRCINSIYET == null)) {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[3].Value = ((string)(OGRCINSIYET));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     
