@@ -46,13 +46,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cbxCinsiyet = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.tbxKulup = new System.Windows.Forms.TextBox();
             this.tbxOgrenciSoyad = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbxKulupler = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -200,10 +200,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbxKulupler);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.cbxCinsiyet);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.tbxKulup);
             this.groupBox1.Controls.Add(this.tbxOgrenciSoyad);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.tbxOgrenciAd);
@@ -249,13 +249,6 @@
             this.label5.Size = new System.Drawing.Size(66, 20);
             this.label5.TabIndex = 7;
             this.label5.Text = "KULÜP:";
-            // 
-            // tbxKulup
-            // 
-            this.tbxKulup.Location = new System.Drawing.Point(222, 98);
-            this.tbxKulup.Name = "tbxKulup";
-            this.tbxKulup.Size = new System.Drawing.Size(144, 20);
-            this.tbxKulup.TabIndex = 6;
             // 
             // tbxOgrenciSoyad
             // 
@@ -317,6 +310,18 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "ÖĞRENCİ İŞLEMLERİ PANELİ";
             // 
+            // cbxKulupler
+            // 
+            this.cbxKulupler.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxKulupler.FormattingEnabled = true;
+            this.cbxKulupler.Items.AddRange(new object[] {
+            "ERKEK",
+            "KIZ"});
+            this.cbxKulupler.Location = new System.Drawing.Point(222, 97);
+            this.cbxKulupler.Name = "cbxKulupler";
+            this.cbxKulupler.Size = new System.Drawing.Size(144, 21);
+            this.cbxKulupler.TabIndex = 10;
+            // 
             // frmOgrenciIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -374,8 +379,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbxCinsiyet;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox tbxKulup;
         private System.Windows.Forms.TextBox tbxOgrenciSoyad;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cbxKulupler;
     }
 }
