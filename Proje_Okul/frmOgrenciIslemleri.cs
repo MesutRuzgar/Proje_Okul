@@ -83,5 +83,13 @@ namespace Proje_Okul
             Temizle();
 
         }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            ds.OgrenciSil(int.Parse(tbxOgrenciId.Text));
+            MessageBox.Show("Öğrenci başarıyla silindi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Liste();
+            Temizle();
+        }
     }
 }
