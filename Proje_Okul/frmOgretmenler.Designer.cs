@@ -37,7 +37,6 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tbxBrans = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tbxOgrentmenId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,6 +48,7 @@
             this.btnListele = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnEkle = new System.Windows.Forms.Button();
+            this.cbxBrans = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -62,6 +62,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 73);
             this.dataGridView1.Name = "dataGridView1";
@@ -131,9 +132,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbxBrans);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.tbxOgretmenAdSoyad);
-            this.groupBox1.Controls.Add(this.tbxBrans);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.tbxOgrentmenId);
             this.groupBox1.Controls.Add(this.label2);
@@ -142,13 +143,6 @@
             this.groupBox1.Size = new System.Drawing.Size(395, 106);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
-            // 
-            // tbxBrans
-            // 
-            this.tbxBrans.Location = new System.Drawing.Point(195, 46);
-            this.tbxBrans.Name = "tbxBrans";
-            this.tbxBrans.Size = new System.Drawing.Size(156, 20);
-            this.tbxBrans.TabIndex = 3;
             // 
             // label3
             // 
@@ -239,6 +233,7 @@
             this.btnListele.TabIndex = 0;
             this.btnListele.Text = "Listele";
             this.btnListele.UseVisualStyleBackColor = true;
+            this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
             // 
             // groupBox2
             // 
@@ -266,6 +261,14 @@
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
             // 
+            // cbxBrans
+            // 
+            this.cbxBrans.FormattingEnabled = true;
+            this.cbxBrans.Location = new System.Drawing.Point(195, 44);
+            this.cbxBrans.Name = "cbxBrans";
+            this.cbxBrans.Size = new System.Drawing.Size(156, 21);
+            this.cbxBrans.TabIndex = 8;
+            // 
             // frmOgretmenler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,6 +287,7 @@
             this.Name = "frmOgretmenler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmOgretmenler";
+            this.Load += new System.EventHandler(this.frmOgretmenler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -309,7 +313,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox tbxBrans;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbxOgrentmenId;
         private System.Windows.Forms.Label label2;
@@ -321,5 +324,6 @@
         private System.Windows.Forms.Button btnListele;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnEkle;
+        private System.Windows.Forms.ComboBox cbxBrans;
     }
 }
