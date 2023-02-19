@@ -68,5 +68,12 @@ namespace Proje_Okul
             Liste();
             Temizle();
         }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            ds.OgretmenGuncelle(byte.Parse(cbxBrans.SelectedValue.ToString()), tbxOgretmenAdSoyad.Text, byte.Parse(tbxOgrentmenId.Text));
+            MessageBox.Show("Bilgileriniz başarıyla güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Liste();
+        }
     }
 }
