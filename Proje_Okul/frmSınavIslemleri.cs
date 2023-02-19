@@ -84,5 +84,19 @@ namespace Proje_Okul
             }
 
         }
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            tbxSinavId.Text = "";
+            tbxOgrenciId.Text = "";
+            tbxOgrenciAd.Text = "";
+            tbxOgrenciSoyad.Text = "";
+            cbxDersler.Text = "";
+            tbxSinav1.Text = "";
+            tbxSinav2.Text = "";
+            tbxSinav3.Text = "";
+            tbxProje.Text = "";
+            tbxDurum.Text = "";
+        }
     }
 }

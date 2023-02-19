@@ -47,6 +47,8 @@
             this.btnHesapla = new System.Windows.Forms.Button();
             this.btnAra = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tbxOrtalama = new System.Windows.Forms.TextBox();
             this.cbxDersler = new System.Windows.Forms.ComboBox();
             this.tbxOgrenciId = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -63,8 +65,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.tbxOrtalama = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -195,6 +195,7 @@
             this.btnTemizle.TabIndex = 9;
             this.btnTemizle.Text = "Temizle";
             this.btnTemizle.UseVisualStyleBackColor = true;
+            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
             // btnGuncelle
             // 
@@ -277,6 +278,24 @@
             this.groupBox1.Size = new System.Drawing.Size(463, 358);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(107, 289);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(101, 20);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "ORTALAMA:";
+            // 
+            // tbxOrtalama
+            // 
+            this.tbxOrtalama.Location = new System.Drawing.Point(223, 287);
+            this.tbxOrtalama.Name = "tbxOrtalama";
+            this.tbxOrtalama.Size = new System.Drawing.Size(144, 24);
+            this.tbxOrtalama.TabIndex = 8;
             // 
             // cbxDersler
             // 
@@ -428,24 +447,6 @@
             this.label1.Size = new System.Drawing.Size(259, 24);
             this.label1.TabIndex = 12;
             this.label1.Text = "SINAV İŞLEMLERİ PANELİ";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(107, 289);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(101, 20);
-            this.label12.TabIndex = 22;
-            this.label12.Text = "ORTALAMA:";
-            // 
-            // tbxOrtalama
-            // 
-            this.tbxOrtalama.Location = new System.Drawing.Point(223, 287);
-            this.tbxOrtalama.Name = "tbxOrtalama";
-            this.tbxOrtalama.Size = new System.Drawing.Size(144, 24);
-            this.tbxOrtalama.TabIndex = 8;
             // 
             // frmSınavIslemleri
             // 
