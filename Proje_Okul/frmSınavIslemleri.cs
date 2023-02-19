@@ -17,9 +17,16 @@ namespace Proje_Okul
             InitializeComponent();
         }
 
+        DataSet1TableAdapters.Tbl_NotlarTableAdapter ds = new DataSet1TableAdapters.Tbl_NotlarTableAdapter();
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnAra_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = ds.NotListesi(int.Parse(tbxOgrenciId.Text));
         }
     }
 }

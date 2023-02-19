@@ -26,7 +26,7 @@ namespace Proje_Okul
 
         private void frmOgrenciNotlar_Load(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("Select DersAd,Sınav1,Sınav2,Sınav3,Proje,Ortalama,Durum  From Tbl_Notlar inner join tbl_dersler on tbl_notlar.DersId=Tbl_Dersler.DersId Where OgrenciId=@p1", baglanti);
+            SqlCommand komut = new SqlCommand("Select DersAd As 'Ders Adı',Sinav1 As '1. Sınav',Sinav2 As '2. Sınav',Sinav3 As '3. Sınav',Proje,Ortalama,Durum  From Tbl_Notlar inner join tbl_dersler on tbl_notlar.DersId=Tbl_Dersler.DersId Where OgrenciId=@p1", baglanti);
 
             komut.Parameters.AddWithValue("@p1", numara);
 
