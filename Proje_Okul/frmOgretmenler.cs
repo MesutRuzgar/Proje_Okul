@@ -29,6 +29,12 @@ namespace Proje_Okul
         {
             dataGridView1.DataSource = ds.OgretmenListe();
         }
+        void Temizle()
+        {
+            tbxOgrentmenId.Text = "";
+            tbxOgretmenAdSoyad.Text = "";
+            cbxBrans.Text = "";
+        }
 
         private void frmOgretmenler_Load(object sender, EventArgs e)
         {
@@ -46,6 +52,21 @@ namespace Proje_Okul
         private void btnListele_Click(object sender, EventArgs e)
         {
             Liste();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tbxOgrentmenId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            cbxBrans.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            tbxOgretmenAdSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+        }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+            ds.OgretmenEkle(byte.Parse(cbxBrans.SelectedValue.ToString()), tbxOgretmenAdSoyad.Text);
+            MessageBox.Show("Yeni öğretmen başarıyla kayıt edildi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Liste();
+            Temizle();
         }
     }
 }
