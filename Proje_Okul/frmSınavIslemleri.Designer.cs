@@ -206,6 +206,7 @@
             this.btnGuncelle.TabIndex = 8;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // pictureBox4
             // 
@@ -292,6 +293,7 @@
             // 
             // tbxOrtalama
             // 
+            this.tbxOrtalama.Enabled = false;
             this.tbxOrtalama.Location = new System.Drawing.Point(223, 287);
             this.tbxOrtalama.Name = "tbxOrtalama";
             this.tbxOrtalama.Size = new System.Drawing.Size(144, 24);
@@ -355,6 +357,7 @@
             // 
             // tbxDurum
             // 
+            this.tbxDurum.Enabled = false;
             this.tbxDurum.Location = new System.Drawing.Point(224, 317);
             this.tbxDurum.Name = "tbxDurum";
             this.tbxDurum.Size = new System.Drawing.Size(144, 24);

@@ -87,6 +87,19 @@ namespace Proje_Okul
 
         private void btnTemizle_Click(object sender, EventArgs e)
         {
+            Temizle();
+        }
+
+       
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            ds.NotGuncelle(byte.Parse(cbxDersler.SelectedValue.ToString()), int.Parse(tbxOgrenciId.Text), int.Parse(tbxSinav1.Text), int.Parse(tbxSinav2.Text), int.Parse(tbxSinav3.Text), int.Parse(tbxSinav3.Text), decimal.Parse(tbxOrtalama.Text), tbxDurum.Text,int.Parse( tbxSinavId.Text));
+            MessageBox.Show("Güncelleme işlemi başarıyla tamamlandı.","Bilgi",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            Temizle();
+        }
+
+        private void Temizle()
+        {
             tbxSinavId.Text = "";
             tbxOgrenciId.Text = "";
             tbxOgrenciAd.Text = "";
@@ -98,5 +111,6 @@ namespace Proje_Okul
             tbxProje.Text = "";
             tbxDurum.Text = "";
         }
+
     }
 }
