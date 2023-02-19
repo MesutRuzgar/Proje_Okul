@@ -43,6 +43,7 @@
             this.btnEkle = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxKulupler = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cbxCinsiyet = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -52,7 +53,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbxKulupler = new System.Windows.Forms.ComboBox();
+            this.btnAra = new System.Windows.Forms.Button();
+            this.tbxAra = new System.Windows.Forms.TextBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -62,6 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSil
@@ -83,6 +87,7 @@
             this.btnGuncelle.TabIndex = 8;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // pictureBox4
             // 
@@ -184,6 +189,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.pictureBox7);
+            this.groupBox2.Controls.Add(this.tbxAra);
+            this.groupBox2.Controls.Add(this.btnAra);
             this.groupBox2.Controls.Add(this.pictureBox5);
             this.groupBox2.Controls.Add(this.pictureBox6);
             this.groupBox2.Controls.Add(this.btnSil);
@@ -194,7 +202,7 @@
             this.groupBox2.Controls.Add(this.btnListele);
             this.groupBox2.Location = new System.Drawing.Point(12, 376);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(491, 105);
+            this.groupBox2.Size = new System.Drawing.Size(491, 138);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             // 
@@ -215,6 +223,18 @@
             this.groupBox1.Size = new System.Drawing.Size(491, 155);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
+            // 
+            // cbxKulupler
+            // 
+            this.cbxKulupler.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxKulupler.FormattingEnabled = true;
+            this.cbxKulupler.Items.AddRange(new object[] {
+            "ERKEK",
+            "KIZ"});
+            this.cbxKulupler.Location = new System.Drawing.Point(222, 97);
+            this.cbxKulupler.Name = "cbxKulupler";
+            this.cbxKulupler.Size = new System.Drawing.Size(144, 21);
+            this.cbxKulupler.TabIndex = 10;
             // 
             // label6
             // 
@@ -310,17 +330,32 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "ÖĞRENCİ İŞLEMLERİ PANELİ";
             // 
-            // cbxKulupler
+            // btnAra
             // 
-            this.cbxKulupler.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxKulupler.FormattingEnabled = true;
-            this.cbxKulupler.Items.AddRange(new object[] {
-            "ERKEK",
-            "KIZ"});
-            this.cbxKulupler.Location = new System.Drawing.Point(222, 97);
-            this.cbxKulupler.Name = "cbxKulupler";
-            this.cbxKulupler.Size = new System.Drawing.Size(144, 21);
-            this.cbxKulupler.TabIndex = 10;
+            this.btnAra.ForeColor = System.Drawing.Color.Black;
+            this.btnAra.Location = new System.Drawing.Point(277, 101);
+            this.btnAra.Name = "btnAra";
+            this.btnAra.Size = new System.Drawing.Size(114, 25);
+            this.btnAra.TabIndex = 12;
+            this.btnAra.Text = "Ara";
+            this.btnAra.UseVisualStyleBackColor = true;
+            // 
+            // tbxAra
+            // 
+            this.tbxAra.Location = new System.Drawing.Point(73, 104);
+            this.tbxAra.Name = "tbxAra";
+            this.tbxAra.Size = new System.Drawing.Size(156, 20);
+            this.tbxAra.TabIndex = 13;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(235, 101);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(36, 25);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 14;
+            this.pictureBox7.TabStop = false;
             // 
             // frmOgrenciIslemleri
             // 
@@ -328,7 +363,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(515, 493);
+            this.ClientSize = new System.Drawing.Size(515, 526);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
@@ -346,11 +381,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,5 +419,8 @@
         private System.Windows.Forms.TextBox tbxOgrenciSoyad;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbxKulupler;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.TextBox tbxAra;
+        private System.Windows.Forms.Button btnAra;
     }
 }

@@ -42,23 +42,23 @@ namespace Proje_Okul
 
         private void frmOgrenciIslemleri_Load(object sender, EventArgs e)
         {
-         
+
             Liste();
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("Select * from tbl_kulupler",baglanti);
+            SqlCommand komut = new SqlCommand("Select * from tbl_kulupler", baglanti);
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
             cbxKulupler.DisplayMember = "KulupAd";
             cbxKulupler.ValueMember = "KulupId";
             cbxKulupler.DataSource = dt;
-           
+
 
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           tbxOgrenciId.Text= dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            tbxOgrenciId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             tbxOgrenciAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             tbxOgrenciSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             cbxKulupler.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
@@ -70,9 +70,18 @@ namespace Proje_Okul
         private void btnEkle_Click(object sender, EventArgs e)
         {
             ds.OgrenciEkle(tbxOgrenciAd.Text, tbxOgrenciSoyad.Text, byte.Parse(cbxKulupler.SelectedValue.ToString()), cbxCinsiyet.Text);
-            MessageBox.Show("Öğrenci başarıyla eklendi.","Bilgi",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Öğrenci başarıyla eklendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Liste();
             Temizle();
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            ds.OgrenciGuncelle(tbxOgrenciAd.Text, tbxOgrenciSoyad.Text, byte.Parse(cbxKulupler.SelectedValue.ToString()), cbxCinsiyet.Text,int.Parse(tbxOgrenciId.Text));
+            MessageBox.Show("Öğrenci başarıyla güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Liste();
+            Temizle();
+
         }
     }
 }
