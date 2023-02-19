@@ -947,9 +947,13 @@ namespace Proje_Okul {
             
             private global::System.Data.DataColumn columnSınav_No;
             
-            private global::System.Data.DataColumn columnDers_Adı;
+            private global::System.Data.DataColumn columnÖğrenci_No;
             
-            private global::System.Data.DataColumn columnÖğrenci_Ad_Soyad;
+            private global::System.Data.DataColumn columnÖğrenci_Ad;
+            
+            private global::System.Data.DataColumn columnÖğrenci_Soyad;
+            
+            private global::System.Data.DataColumn columnDers_Adı;
             
             private global::System.Data.DataColumn column1__Sınav;
             
@@ -1006,17 +1010,33 @@ namespace Proje_Okul {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Ders_AdıColumn {
+            public global::System.Data.DataColumn Öğrenci_NoColumn {
                 get {
-                    return this.columnDers_Adı;
+                    return this.columnÖğrenci_No;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Öğrenci_Ad_SoyadColumn {
+            public global::System.Data.DataColumn Öğrenci_AdColumn {
                 get {
-                    return this.columnÖğrenci_Ad_Soyad;
+                    return this.columnÖğrenci_Ad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Öğrenci_SoyadColumn {
+                get {
+                    return this.columnÖğrenci_Soyad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Ders_AdıColumn {
+                get {
+                    return this.columnDers_Adı;
                 }
             }
             
@@ -1105,12 +1125,14 @@ namespace Proje_Okul {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Tbl_NotlarRow AddTbl_NotlarRow(byte Ders_Adı, int Öğrenci_Ad_Soyad, byte _1__Sınav, byte _2__Sınav, byte _3__Sınav, byte Proje_, decimal Ortalama_, bool Durum_) {
+            public Tbl_NotlarRow AddTbl_NotlarRow(int Öğrenci_No, string Öğrenci_Ad, string Öğrenci_Soyad, string Ders_Adı, byte _1__Sınav, byte _2__Sınav, byte _3__Sınav, byte Proje_, decimal Ortalama_, string Durum_) {
                 Tbl_NotlarRow rowTbl_NotlarRow = ((Tbl_NotlarRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
+                        Öğrenci_No,
+                        Öğrenci_Ad,
+                        Öğrenci_Soyad,
                         Ders_Adı,
-                        Öğrenci_Ad_Soyad,
                         _1__Sınav,
                         _2__Sınav,
                         _3__Sınav,
@@ -1147,8 +1169,10 @@ namespace Proje_Okul {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columnSınav_No = base.Columns["Sınav No"];
+                this.columnÖğrenci_No = base.Columns["Öğrenci No"];
+                this.columnÖğrenci_Ad = base.Columns["Öğrenci Ad"];
+                this.columnÖğrenci_Soyad = base.Columns["Öğrenci Soyad"];
                 this.columnDers_Adı = base.Columns["Ders Adı"];
-                this.columnÖğrenci_Ad_Soyad = base.Columns["Öğrenci Ad Soyad"];
                 this.column1__Sınav = base.Columns["1_ Sınav"];
                 this.column2__Sınav = base.Columns["2_ Sınav"];
                 this.column3__Sınav = base.Columns["3_ Sınav"];
@@ -1162,10 +1186,14 @@ namespace Proje_Okul {
             private void InitClass() {
                 this.columnSınav_No = new global::System.Data.DataColumn("Sınav No", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSınav_No);
-                this.columnDers_Adı = new global::System.Data.DataColumn("Ders Adı", typeof(byte), null, global::System.Data.MappingType.Element);
+                this.columnÖğrenci_No = new global::System.Data.DataColumn("Öğrenci No", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnÖğrenci_No);
+                this.columnÖğrenci_Ad = new global::System.Data.DataColumn("Öğrenci Ad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnÖğrenci_Ad);
+                this.columnÖğrenci_Soyad = new global::System.Data.DataColumn("Öğrenci Soyad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnÖğrenci_Soyad);
+                this.columnDers_Adı = new global::System.Data.DataColumn("Ders Adı", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDers_Adı);
-                this.columnÖğrenci_Ad_Soyad = new global::System.Data.DataColumn("Öğrenci Ad Soyad", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnÖğrenci_Ad_Soyad);
                 this.column1__Sınav = new global::System.Data.DataColumn("1_ Sınav", typeof(byte), null, global::System.Data.MappingType.Element);
                 this.column1__Sınav.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "column1__Sınav");
                 this.column1__Sınav.ExtendedProperties.Add("Generator_UserColumnName", "1_ Sınav");
@@ -1182,7 +1210,7 @@ namespace Proje_Okul {
                 base.Columns.Add(this.columnProje_);
                 this.columnOrtalama_ = new global::System.Data.DataColumn("Ortalama ", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnOrtalama_);
-                this.columnDurum_ = new global::System.Data.DataColumn("Durum ", typeof(bool), null, global::System.Data.MappingType.Element);
+                this.columnDurum_ = new global::System.Data.DataColumn("Durum ", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDurum_);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnSınav_No}, true));
@@ -1192,9 +1220,13 @@ namespace Proje_Okul {
                 this.columnSınav_No.AllowDBNull = false;
                 this.columnSınav_No.ReadOnly = true;
                 this.columnSınav_No.Unique = true;
+                this.columnÖğrenci_Ad.MaxLength = 30;
+                this.columnÖğrenci_Soyad.MaxLength = 30;
+                this.columnDers_Adı.MaxLength = 30;
                 this.column1__Sınav.Caption = "1. Sınav";
                 this.column2__Sınav.Caption = "2. Sınav";
                 this.column3__Sınav.Caption = "3. Sınav";
+                this.columnDurum_.MaxLength = 5;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1540,10 +1572,58 @@ namespace Proje_Okul {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public byte Ders_Adı {
+            public int Öğrenci_No {
                 get {
                     try {
-                        return ((byte)(this[this.tableTbl_Notlar.Ders_AdıColumn]));
+                        return ((int)(this[this.tableTbl_Notlar.Öğrenci_NoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Öğrenci No\' in table \'Tbl_Notlar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTbl_Notlar.Öğrenci_NoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Öğrenci_Ad {
+                get {
+                    try {
+                        return ((string)(this[this.tableTbl_Notlar.Öğrenci_AdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Öğrenci Ad\' in table \'Tbl_Notlar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTbl_Notlar.Öğrenci_AdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Öğrenci_Soyad {
+                get {
+                    try {
+                        return ((string)(this[this.tableTbl_Notlar.Öğrenci_SoyadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Öğrenci Soyad\' in table \'Tbl_Notlar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTbl_Notlar.Öğrenci_SoyadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Ders_Adı {
+                get {
+                    try {
+                        return ((string)(this[this.tableTbl_Notlar.Ders_AdıColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Ders Adı\' in table \'Tbl_Notlar\' is DBNull.", e);
@@ -1551,22 +1631,6 @@ namespace Proje_Okul {
                 }
                 set {
                     this[this.tableTbl_Notlar.Ders_AdıColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Öğrenci_Ad_Soyad {
-                get {
-                    try {
-                        return ((int)(this[this.tableTbl_Notlar.Öğrenci_Ad_SoyadColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Öğrenci Ad Soyad\' in table \'Tbl_Notlar\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableTbl_Notlar.Öğrenci_Ad_SoyadColumn] = value;
                 }
             }
             
@@ -1652,10 +1716,10 @@ namespace Proje_Okul {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Durum_ {
+            public string Durum_ {
                 get {
                     try {
-                        return ((bool)(this[this.tableTbl_Notlar.Durum_Column]));
+                        return ((string)(this[this.tableTbl_Notlar.Durum_Column]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Durum \' in table \'Tbl_Notlar\' is DBNull.", e);
@@ -1668,6 +1732,42 @@ namespace Proje_Okul {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsÖğrenci_NoNull() {
+                return this.IsNull(this.tableTbl_Notlar.Öğrenci_NoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetÖğrenci_NoNull() {
+                this[this.tableTbl_Notlar.Öğrenci_NoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsÖğrenci_AdNull() {
+                return this.IsNull(this.tableTbl_Notlar.Öğrenci_AdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetÖğrenci_AdNull() {
+                this[this.tableTbl_Notlar.Öğrenci_AdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsÖğrenci_SoyadNull() {
+                return this.IsNull(this.tableTbl_Notlar.Öğrenci_SoyadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetÖğrenci_SoyadNull() {
+                this[this.tableTbl_Notlar.Öğrenci_SoyadColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsDers_AdıNull() {
                 return this.IsNull(this.tableTbl_Notlar.Ders_AdıColumn);
             }
@@ -1676,18 +1776,6 @@ namespace Proje_Okul {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetDers_AdıNull() {
                 this[this.tableTbl_Notlar.Ders_AdıColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsÖğrenci_Ad_SoyadNull() {
-                return this.IsNull(this.tableTbl_Notlar.Öğrenci_Ad_SoyadColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetÖğrenci_Ad_SoyadNull() {
-                this[this.tableTbl_Notlar.Öğrenci_Ad_SoyadColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2774,8 +2862,10 @@ WHERE        (Tbl_Ogrenciler.OgrenciAd = @OgrenciAd)";
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Tbl_Notlar";
             tableMapping.ColumnMappings.Add("Sınav No", "Sınav No");
+            tableMapping.ColumnMappings.Add("Öğrenci No", "Öğrenci No");
+            tableMapping.ColumnMappings.Add("Öğrenci Ad", "Öğrenci Ad");
+            tableMapping.ColumnMappings.Add("Öğrenci Soyad", "Öğrenci Soyad");
             tableMapping.ColumnMappings.Add("Ders Adı", "Ders Adı");
-            tableMapping.ColumnMappings.Add("Öğrenci Ad Soyad", "Öğrenci Ad Soyad");
             tableMapping.ColumnMappings.Add("1. Sınav", "1_ Sınav");
             tableMapping.ColumnMappings.Add("2. Sınav", "2_ Sınav");
             tableMapping.ColumnMappings.Add("3. Sınav", "3_ Sınav");
@@ -2783,71 +2873,6 @@ WHERE        (Tbl_Ogrenciler.OgrenciAd = @OgrenciAd)";
             tableMapping.ColumnMappings.Add("Ortalama ", "Ortalama ");
             tableMapping.ColumnMappings.Add("Durum ", "Durum ");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Tbl_Notlar] WHERE (([NotId] = @Original_Sınav_No) AND ((@IsNull_Ders_Adı = 1 AND [DersId] IS NULL) OR ([DersId] = @Original_Ders_Adı)) AND ((@IsNull_Öğrenci_Ad_Soyad = 1 AND [OgrenciId] IS NULL) OR ([OgrenciId] = @Original_Öğrenci_Ad_Soyad)) AND ((@p3 = 1 AND [Sinav1] IS NULL) OR ([Sinav1] = @p2)) AND ((@p6 = 1 AND [Sinav2] IS NULL) OR ([Sinav2] = @p5)) AND ((@p9 = 1 AND [Sinav3] IS NULL) OR ([Sinav3] = @p8)) AND ((@IsNull_Proje_ = 1 AND [Proje ] IS NULL) OR ([Proje ] = @Original_Proje_)) AND ((@IsNull_Ortalama_ = 1 AND [Ortalama ] IS NULL) OR ([Ortalama ] = @Original_Ortalama_)) AND ((@IsNull_Durum_ = 1 AND [Durum ] IS NULL) OR ([Durum ] = @Original_Durum_)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sınav_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sınav No", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ders_Adı", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ders Adı", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ders_Adı", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ders Adı", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Öğrenci_Ad_Soyad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Öğrenci Ad Soyad", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Öğrenci_Ad_Soyad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Öğrenci Ad Soyad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1. Sınav", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1. Sınav", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "2. Sınav", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p5", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "2. Sınav", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p9", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "3. Sınav", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p8", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "3. Sınav", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Proje_", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Proje ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Proje_", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Proje ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ortalama_", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ortalama ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ortalama_", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "Ortalama ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Durum_", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Durum ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Durum_", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Durum ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Tbl_Notlar] ([DersId], [OgrenciId], [Sinav1], [Sinav2], [Sinav3], [Proje ], [Ortalama ], [Durum ]) VALUES (@Ders_Adı, @Öğrenci_Ad_Soyad, @p1, @p4, @p7, @Proje_, @Ortalama_, @Durum_);
-SELECT NotId AS [Sınav No], DersId AS [Ders Adı], OgrenciId AS [Öğrenci Ad Soyad], Sinav1 AS [1. Sınav], Sinav2 AS [2. Sınav], Sinav3 AS [3. Sınav], Proje AS [Proje ], Ortalama AS [Ortalama ], Durum AS [Durum ] FROM Tbl_Notlar WHERE (NotId = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ders_Adı", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ders Adı", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Öğrenci_Ad_Soyad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Öğrenci Ad Soyad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1. Sınav", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p4", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "2. Sınav", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p7", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "3. Sınav", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Proje_", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Proje ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ortalama_", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "Ortalama ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Durum_", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Durum ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Tbl_Notlar] SET [DersId] = @Ders_Adı, [OgrenciId] = @Öğrenci_Ad_Soyad, [Sinav1] = @p1, [Sinav2] = @p4, [Sinav3] = @p7, [Proje ] = @Proje_, [Ortalama ] = @Ortalama_, [Durum ] = @Durum_ WHERE (([NotId] = @Original_Sınav_No) AND ((@IsNull_Ders_Adı = 1 AND [DersId] IS NULL) OR ([DersId] = @Original_Ders_Adı)) AND ((@IsNull_Öğrenci_Ad_Soyad = 1 AND [OgrenciId] IS NULL) OR ([OgrenciId] = @Original_Öğrenci_Ad_Soyad)) AND ((@p3 = 1 AND [Sinav1] IS NULL) OR ([Sinav1] = @p2)) AND ((@p6 = 1 AND [Sinav2] IS NULL) OR ([Sinav2] = @p5)) AND ((@p9 = 1 AND [Sinav3] IS NULL) OR ([Sinav3] = @p8)) AND ((@IsNull_Proje_ = 1 AND [Proje ] IS NULL) OR ([Proje ] = @Original_Proje_)) AND ((@IsNull_Ortalama_ = 1 AND [Ortalama ] IS NULL) OR ([Ortalama ] = @Original_Ortalama_)) AND ((@IsNull_Durum_ = 1 AND [Durum ] IS NULL) OR ([Durum ] = @Original_Durum_)));
-SELECT NotId AS [Sınav No], DersId AS [Ders Adı], OgrenciId AS [Öğrenci Ad Soyad], Sinav1 AS [1. Sınav], Sinav2 AS [2. Sınav], Sinav3 AS [3. Sınav], Proje AS [Proje ], Ortalama AS [Ortalama ], Durum AS [Durum ] FROM Tbl_Notlar WHERE (NotId = @NotId)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ders_Adı", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ders Adı", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Öğrenci_Ad_Soyad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Öğrenci Ad Soyad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1. Sınav", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p4", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "2. Sınav", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p7", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "3. Sınav", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Proje_", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Proje ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ortalama_", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "Ortalama ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Durum_", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Durum ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sınav_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sınav No", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ders_Adı", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ders Adı", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ders_Adı", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ders Adı", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Öğrenci_Ad_Soyad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Öğrenci Ad Soyad", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Öğrenci_Ad_Soyad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Öğrenci Ad Soyad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1. Sınav", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1. Sınav", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "2. Sınav", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p5", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "2. Sınav", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p9", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "3. Sınav", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p8", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "3. Sınav", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Proje_", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Proje ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Proje_", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Proje ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ortalama_", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ortalama ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ortalama_", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 2, "Ortalama ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Durum_", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Durum ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Durum_", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Durum ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NotId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Sınav No", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2863,11 +2888,14 @@ SELECT NotId AS [Sınav No], DersId AS [Ders Adı], OgrenciId AS [Öğrenci Ad S
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        NotId AS [Sınav No], DersId AS [Ders Adı], OgrenciId AS [Öğrenci Ad Soyad], Sinav1 AS [1. Sınav], Sinav2 AS [2. Sınav], Sinav3 AS [3. Sınav], Proje AS [Proje ], Ortalama AS [Ortalama ], Durum AS [Durum ]
-FROM            Tbl_Notlar
-WHERE        (OgrenciId = @OgrenciId)";
+            this._commandCollection[0].CommandText = @"SELECT        Tbl_Notlar.NotId AS [Sınav No], Tbl_Notlar.OgrenciId AS [Öğrenci No], Tbl_Ogrenciler.OgrenciAd AS [Öğrenci Ad], Tbl_Ogrenciler.OgrenciSoyad AS [Öğrenci Soyad], Tbl_Dersler.DersAd AS [Ders Adı], 
+                         Tbl_Notlar.Sinav1 AS [1. Sınav], Tbl_Notlar.Sinav2 AS [2. Sınav], Tbl_Notlar.Sinav3 AS [3. Sınav], Tbl_Notlar.Proje AS [Proje ], Tbl_Notlar.Ortalama AS [Ortalama ], Tbl_Notlar.Durum AS [Durum ]
+FROM            Tbl_Notlar INNER JOIN
+                         Tbl_Dersler ON Tbl_Notlar.DersId = Tbl_Dersler.DersId INNER JOIN
+                         Tbl_Ogrenciler ON Tbl_Notlar.OgrenciId = Tbl_Ogrenciler.OgrenciId
+WHERE        (Tbl_Notlar.OgrenciId = @OgrenciId)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Öğrenci Ad Soyad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Öğrenci No", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2905,192 +2933,6 @@ WHERE        (OgrenciId = @OgrenciId)";
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet1.Tbl_NotlarDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet1 dataSet) {
-            return this.Adapter.Update(dataSet, "Tbl_Notlar");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Sınav_No, byte Original_Ders_Adı, int Original_Öğrenci_Ad_Soyad, byte p2, byte p5, byte p8, byte Original_Proje_, decimal Original_Ortalama_, bool Original_Durum_) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Sınav_No));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((byte)(Original_Ders_Adı));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Öğrenci_Ad_Soyad));
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((byte)(p2));
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[8].Value = ((byte)(p5));
-            this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[10].Value = ((byte)(p8));
-            this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[12].Value = ((byte)(Original_Proje_));
-            this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[14].Value = ((decimal)(Original_Ortalama_));
-            this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[16].Value = ((bool)(Original_Durum_));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(byte Ders_Adı, int Öğrenci_Ad_Soyad, byte p1, byte p4, byte p7, byte Proje_, decimal Ortalama_, bool Durum_) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((byte)(Ders_Adı));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(Öğrenci_Ad_Soyad));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((byte)(p1));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((byte)(p4));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((byte)(p7));
-            this.Adapter.InsertCommand.Parameters[5].Value = ((byte)(Proje_));
-            this.Adapter.InsertCommand.Parameters[6].Value = ((decimal)(Ortalama_));
-            this.Adapter.InsertCommand.Parameters[7].Value = ((bool)(Durum_));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    byte Ders_Adı, 
-                    int Öğrenci_Ad_Soyad, 
-                    byte p1, 
-                    byte p4, 
-                    byte p7, 
-                    byte Proje_, 
-                    decimal Ortalama_, 
-                    bool Durum_, 
-                    int Original_Sınav_No, 
-                    byte Original_Ders_Adı, 
-                    int Original_Öğrenci_Ad_Soyad, 
-                    byte p2, 
-                    byte p5, 
-                    byte p8, 
-                    byte Original_Proje_, 
-                    decimal Original_Ortalama_, 
-                    bool Original_Durum_, 
-                    int NotId) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((byte)(Ders_Adı));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Öğrenci_Ad_Soyad));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((byte)(p1));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((byte)(p4));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((byte)(p7));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((byte)(Proje_));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(Ortalama_));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((bool)(Durum_));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Sınav_No));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((byte)(Original_Ders_Adı));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_Öğrenci_Ad_Soyad));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((byte)(p2));
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((byte)(p5));
-            this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((byte)(p8));
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((byte)(Original_Proje_));
-            this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[22].Value = ((decimal)(Original_Ortalama_));
-            this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[24].Value = ((bool)(Original_Durum_));
-            this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(NotId));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    byte Ders_Adı, 
-                    int Öğrenci_Ad_Soyad, 
-                    byte p1, 
-                    byte p4, 
-                    byte p7, 
-                    byte Proje_, 
-                    decimal Ortalama_, 
-                    bool Durum_, 
-                    int Original_Sınav_No, 
-                    byte Original_Ders_Adı, 
-                    int Original_Öğrenci_Ad_Soyad, 
-                    byte p2, 
-                    byte p5, 
-                    byte p8, 
-                    byte Original_Proje_, 
-                    decimal Original_Ortalama_, 
-                    bool Original_Durum_) {
-            return this.Update(Ders_Adı, Öğrenci_Ad_Soyad, p1, p4, p7, Proje_, Ortalama_, Durum_, Original_Sınav_No, Original_Ders_Adı, Original_Öğrenci_Ad_Soyad, p2, p5, p8, Original_Proje_, Original_Ortalama_, Original_Durum_, Original_Sınav_No);
-        }
     }
     
     /// <summary>
@@ -3106,8 +2948,6 @@ WHERE        (OgrenciId = @OgrenciId)";
         private UpdateOrderOption _updateOrder;
         
         private Tbl_DerslerTableAdapter _tbl_DerslerTableAdapter;
-        
-        private Tbl_NotlarTableAdapter _tbl_NotlarTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -3140,20 +2980,6 @@ WHERE        (OgrenciId = @OgrenciId)";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public Tbl_NotlarTableAdapter Tbl_NotlarTableAdapter {
-            get {
-                return this._tbl_NotlarTableAdapter;
-            }
-            set {
-                this._tbl_NotlarTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -3175,10 +3001,6 @@ WHERE        (OgrenciId = @OgrenciId)";
                             && (this._tbl_DerslerTableAdapter.Connection != null))) {
                     return this._tbl_DerslerTableAdapter.Connection;
                 }
-                if (((this._tbl_NotlarTableAdapter != null) 
-                            && (this._tbl_NotlarTableAdapter.Connection != null))) {
-                    return this._tbl_NotlarTableAdapter.Connection;
-                }
                 return null;
             }
             set {
@@ -3193,9 +3015,6 @@ WHERE        (OgrenciId = @OgrenciId)";
             get {
                 int count = 0;
                 if ((this._tbl_DerslerTableAdapter != null)) {
-                    count = (count + 1);
-                }
-                if ((this._tbl_NotlarTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -3218,15 +3037,6 @@ WHERE        (OgrenciId = @OgrenciId)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tbl_NotlarTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Tbl_Notlar.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tbl_NotlarTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -3245,14 +3055,6 @@ WHERE        (OgrenciId = @OgrenciId)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tbl_NotlarTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Tbl_Notlar.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tbl_NotlarTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -3263,14 +3065,6 @@ WHERE        (OgrenciId = @OgrenciId)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._tbl_NotlarTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Tbl_Notlar.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tbl_NotlarTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._tbl_DerslerTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Tbl_Dersler.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -3323,11 +3117,6 @@ WHERE        (OgrenciId = @OgrenciId)";
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._tbl_NotlarTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tbl_NotlarTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
@@ -3367,15 +3156,6 @@ WHERE        (OgrenciId = @OgrenciId)";
                     if (this._tbl_DerslerTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._tbl_DerslerTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._tbl_DerslerTableAdapter.Adapter);
-                    }
-                }
-                if ((this._tbl_NotlarTableAdapter != null)) {
-                    revertConnections.Add(this._tbl_NotlarTableAdapter, this._tbl_NotlarTableAdapter.Connection);
-                    this._tbl_NotlarTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._tbl_NotlarTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._tbl_NotlarTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tbl_NotlarTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tbl_NotlarTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -3439,10 +3219,6 @@ WHERE        (OgrenciId = @OgrenciId)";
                 if ((this._tbl_DerslerTableAdapter != null)) {
                     this._tbl_DerslerTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tbl_DerslerTableAdapter]));
                     this._tbl_DerslerTableAdapter.Transaction = null;
-                }
-                if ((this._tbl_NotlarTableAdapter != null)) {
-                    this._tbl_NotlarTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tbl_NotlarTableAdapter]));
-                    this._tbl_NotlarTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
