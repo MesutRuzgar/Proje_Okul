@@ -35,7 +35,6 @@
             this.tbxSinav1 = new System.Windows.Forms.TextBox();
             this.tbxOgrenciAd = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.tbxDersId = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tbxSinavId = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -63,6 +62,7 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnHesapla = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.cbxDersler = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -127,13 +127,6 @@
             this.label4.Size = new System.Drawing.Size(115, 20);
             this.label4.TabIndex = 4;
             this.label4.Text = "ÖĞRENCİ AD:";
-            // 
-            // tbxDersId
-            // 
-            this.tbxDersId.Location = new System.Drawing.Point(195, 140);
-            this.tbxDersId.Name = "tbxDersId";
-            this.tbxDersId.Size = new System.Drawing.Size(144, 24);
-            this.tbxDersId.TabIndex = 3;
             // 
             // label3
             // 
@@ -213,13 +206,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbxDersler);
             this.groupBox1.Controls.Add(this.tbxOgrenciId);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.tbxOgrenciSoyad);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.tbxDurum);
-            this.groupBox1.Controls.Add(this.tbxDersId);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.tbxProje);
@@ -421,6 +414,15 @@
             this.pictureBox4.TabIndex = 7;
             this.pictureBox4.TabStop = false;
             // 
+            // cbxDersler
+            // 
+            this.cbxDersler.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxDersler.FormattingEnabled = true;
+            this.cbxDersler.Location = new System.Drawing.Point(196, 140);
+            this.cbxDersler.Name = "cbxDersler";
+            this.cbxDersler.Size = new System.Drawing.Size(143, 26);
+            this.cbxDersler.TabIndex = 20;
+            // 
             // frmSınavIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -441,6 +443,7 @@
             this.Name = "frmSınavIslemleri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSınavIslemleri";
+            this.Load += new System.EventHandler(this.frmSınavIslemleri_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -464,7 +467,6 @@
         private System.Windows.Forms.TextBox tbxSinav1;
         private System.Windows.Forms.TextBox tbxOgrenciAd;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tbxDersId;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbxSinavId;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -492,5 +494,6 @@
         private System.Windows.Forms.Button btnTemizle;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btnHesapla;
+        private System.Windows.Forms.ComboBox cbxDersler;
     }
 }
