@@ -75,5 +75,13 @@ namespace Proje_Okul
             MessageBox.Show("Bilgileriniz başarıyla güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Liste();
         }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            ds.OgretmenSil(byte.Parse(tbxOgrentmenId.Text));
+            MessageBox.Show("Kayıtlı öğretmen başarıyla silindi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Liste();
+            Temizle();
+        }
     }
 }

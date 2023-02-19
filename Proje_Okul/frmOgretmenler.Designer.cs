@@ -184,6 +184,7 @@
             this.btnSil.TabIndex = 9;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // pictureBox1
             // 
