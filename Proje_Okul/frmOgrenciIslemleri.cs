@@ -91,5 +91,10 @@ namespace Proje_Okul
             Liste();
             Temizle();
         }
+
+        private void btnAra_Click(object sender, EventArgs e)
+        {
+          dataGridView1.DataSource=  ds.OgrenciGetir(tbxAra.Text);
+        }
     }
 }
