@@ -20,7 +20,7 @@
             - **Öğrenci Ekleme** --> https://www.hizliresim.com/rgacriz
             - **Öğrenci Güncelleme** --> https://www.hizliresim.com/n459q2o
             - **Öğrenci Silme** --> https://www.hizliresim.com/j93bxfr
-            - **Öğrenci İsme Göre Arama --> https://www.hizliresim.com/oddx7gt
+            - **Öğrenci İsme Göre Arama** --> https://www.hizliresim.com/oddx7gt
             
        - **Öğretmenler Paneli** --> https://www.hizliresim.com/jipgm7c
            - **Öğretmen Ekleme** --> https://www.hizliresim.com/80kbmm0
