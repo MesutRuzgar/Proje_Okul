@@ -5,38 +5,39 @@
  
 ## Proje Resimleri
 
- 1. **Girişler** --> https://imgyukle.com/i/QCt1iG
+ 1. **Girişler** --> https://www.hizliresim.com/qqmna8m
  
- 2.  **Öğrenci Giriş** --> https://imgyukle.com/i/QCtbtq       
+ 2.  **Öğrenci Giriş** --> https://www.hizliresim.com/s47tj4c       
  
- 3.  **Öğretmen Giriş** --> https://imgyukle.com/i/QCtd9y
+ 3.  **Öğretmen Giriş** --> https://www.hizliresim.com/koijbdw
  
-       - **Ders İşlemleri Paneli** --> https://imgyukle.com/i/QCt2Rb
-           - **Ders Ekleme** --> https://imgyukle.com/i/QCteAt
-           - **Ders Güncelleme** --> https://imgyukle.com/i/QCtWUQ
-           - **Ders Silme** --> https://imgyukle.com/i/QCtUOs
+       - **Ders İşlemleri Paneli** --> https://www.hizliresim.com/j95upe8
+           - **Ders Ekleme** --> https://www.hizliresim.com/7llc1je
+           - **Ders Güncelleme** --> https://www.hizliresim.com/j6job2y
+           - **Ders Silme** --> https://www.hizliresim.com/mkrb6mu
 
-        - **Öğrenci İşlemleri Paneli** --> https://imgyukle.com/i/QCt9O0
-            - **Öğrenci Ekleme** --> https://imgyukle.com/i/QCtMCN
-            - **Öğrenci Güncelleme** --> https://imgyukle.com/i/QCt6VY
-            - **Öğrenci Silme** --> https://imgyukle.com/i/QCtwdx
+        - **Öğrenci İşlemleri Paneli** --> https://www.hizliresim.com/6eixmzw
+            - **Öğrenci Ekleme** --> https://www.hizliresim.com/rgacriz
+            - **Öğrenci Güncelleme** --> https://www.hizliresim.com/n459q2o
+            - **Öğrenci Silme** --> https://www.hizliresim.com/j93bxfr
+            - **Öğrenci İsme Göre Arama --> https://www.hizliresim.com/oddx7gt
             
-       - **Öğretmenler Paneli** --> https://imgyukle.com/i/QCFkCM
-           - **Öğretmen Ekleme** --> https://imgyukle.com/i/QCt7T6
-           - **Öğretmen Güncelleme** --> https://imgyukle.com/i/QCtAvp
-           - **Öğretmen Silme** --> https://imgyukle.com/i/QCFosh
+       - **Öğretmenler Paneli** --> https://www.hizliresim.com/jipgm7c
+           - **Öğretmen Ekleme** --> https://www.hizliresim.com/80kbmm0
+           - **Öğretmen Güncelleme** --> https://www.hizliresim.com/pzjvtrw
+           - **Öğretmen Silme** --> https://www.hizliresim.com/r0e8y9n
 
-        - **Sınav İşlemleri Paneli** --> https://imgyukle.com/i/QCtfUv
-            - **Öğrenci No'ya Göre Arama** --> https://imgyukle.com/i/QCFEFn
-            - **Not Güncelleme** --> https://imgyukle.com/i/QCtlvR
-            - **Not Ortalama ve Öğrenci Ders Durum Hesaplama** --> https://imgyukle.com/i/QCtfUv
+        - **Sınav İşlemleri Paneli** --> https://www.hizliresim.com/6bzqh1t
+            - **Öğrenci No'ya Göre Arama** --> https://www.hizliresim.com/5anitwk
+            - **Not Güncelleme** --> https://www.hizliresim.com/jfs8dps
+            - **Not Ortalama ve Öğrenci Ders Durum Hesaplama** --> https://www.hizliresim.com/6bzqh1t
             
             > Sınav notları ve proje notu girildiği takdirde hesapla butonu ile hesaplamalar yapılmaktadır.
 
-        - **Kulüp İşelmleri** --> https://imgyukle.com/i/QCtm6I
-            - **Kulüp Ekleme** --> https://imgyukle.com/i/QCtKtS
-            - **Kulüp Güncelleme** --> https://imgyukle.com/i/QCtzyf
-            - **Kulüp Silme** --> https://imgyukle.com/i/QCt8Tc
+        - **Kulüp İşelmleri** --> https://www.hizliresim.com/f6fmhz4
+            - **Kulüp Ekleme** --> https://www.hizliresim.com/k6t0z39
+            - **Kulüp Güncelleme** --> https://www.hizliresim.com/dtgrj39
+            - **Kulüp Silme** --> https://www.hizliresim.com/b4m3bvv
 
 
  
